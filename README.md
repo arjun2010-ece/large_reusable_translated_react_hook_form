@@ -17,9 +17,17 @@ Way to use it:::
 
 1. Use FormProvider and form tag only in the root of the project then break down each form into sub components and fetch all things like register, errors in different forms by useFormContext.
 
+useForm() hook is always used onetime for one form tag.
+
 ```
 
-
+const methods = useForm<Order>({
+        mode: 'onBlur',
+        defaultValues: order,
+        resolver: yupResolver(schema), // may or may not be used
+    });
+    
+    
  <FormProvider {...methods}>
             <form onSubmit={methods.handleSubmit(onSubmit)}>
                 <ContactInfoForm />
