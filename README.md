@@ -18,6 +18,9 @@ Way to use it:::
 1. Use FormProvider and form tag only in the root of the project then break down each form into sub components and fetch all things like register, errors in different forms by useFormContext.
 
 `
+
+ <hr className="mt-4 mb3" />
+
  <FormProvider {...methods}>
             <form onSubmit={methods.handleSubmit(onSubmit)}>
                 <ContactInfoForm />
